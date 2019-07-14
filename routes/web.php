@@ -65,3 +65,12 @@ Route::prefix('admin')->group(function () {
         // Matches The "/admin/users" URL
     });
 });
+
+Route::prefix('home')->group(function () {
+    Route::get('/mision', function () {
+        // Matches The "/admin/users" URL
+    });
+    Route::get('/vision', function () {
+        // Matches The "/admin/users" URL
+    });
+});

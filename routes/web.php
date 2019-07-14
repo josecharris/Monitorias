@@ -74,3 +74,6 @@ Route::prefix('home')->group(function () {
         // Matches The "/admin/users" URL
     });
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

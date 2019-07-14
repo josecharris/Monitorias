@@ -32,9 +32,10 @@
           Login
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Administrador</a>
-          <a class="dropdown-item" href="#">Monitor</a>
-          <a class="dropdown-item" href="#">Estudiante</a>
+          <a class="dropdown-item" href="{{ route('login') }}">Administrador</a>
+          <a class="dropdown-item" href="{{ route('login') }}">Monitor</a>
+          <a class="dropdown-item" href="{{ route('login') }}">Docente</a>
+          <a class="dropdown-item" href="{{ route('login') }}">Estudiante</a>
         </div>
       </li>
       </ul>

@@ -16,7 +16,15 @@
                     @if(Auth::user()->hasRole('admin'))
                         <div>Acceso como administrador</div>
                     @else
-                        <div>Acceso usuario</div>
+                        @if(Auth::user()->hasRole('monitor'))
+                            <div>Acceso como Monitor</div>
+                        @else
+                            @if(Auth::user()->hasRole('docente'))
+                                <div>Acceso como Profesor</div>
+                            @else
+                                <div>Acceso como estudiante</div>
+                            @endif
+                        @endif
                     @endif
                     You are logged in!
                 </div>

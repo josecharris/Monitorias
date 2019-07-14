@@ -27,17 +27,9 @@
         <li class="nav-item">
           <a class="nav-link" href="#footer">Contacto</a>
         </li>
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Login
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="{{ route('login') }}">Administrador</a>
-          <a class="dropdown-item" href="{{ route('login') }}">Monitor</a>
-          <a class="dropdown-item" href="{{ route('login') }}">Docente</a>
-          <a class="dropdown-item" href="{{ route('login') }}">Estudiante</a>
-        </div>
-      </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('login') }}">Login</a>
+        </li>
       </ul>
     </div>
   </div>

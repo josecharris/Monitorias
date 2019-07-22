@@ -15,20 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// CRUD DE USUARIOS
+
 Route::prefix('admin')->group(function () {
-    Route::get('/create/users', function () {
-        // Matches The "/admin/users" URL
-    });
-    Route::get('/show/users', function () {
-        // Matches The "/admin/users" URL
-    });
-    Route::get('/update/users', function () {
-        // Matches The "/admin/users" URL
-    });
-    Route::get('/delete/users', function () {
-        // Matches The "/admin/users" URL
-    });
+    // CRUD DE USUARIOS
+    Route::resource('users','UsersController');
+    Route::get('users/{id}/destroy',[
+        'uses' => 'UsersController@destroy',
+        'as' => 'users.destroy'
+    ]);
 
     // CRUD MONITORES
     Route::get('/create/monitores', function () {

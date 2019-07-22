@@ -15,6 +15,38 @@
                     @endif
                     @if(Auth::user()->hasRole('admin'))
                         <div>Acceso como administrador</div>
+                        @section('menu-bar')
+                        <!--CRUD DE USUARIOS  -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('users.index') }}">Administrar usuarios</a>  
+                        </li>
+                        <!--CRUD DE CURSOS-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Administrar cursos
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Agregar</a>
+                                <a class="dropdown-item" href="#">Mostrar</a>
+                                <a class="dropdown-item" href="#">Actualizar info</a>
+                                <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Eliminar</a>
+                                </div>
+                        </li>
+                        <!--CONTENIDO-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Administrar info
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Ver mision</a>
+                                <a class="dropdown-item" href="#">Modificar mision</a>
+                                <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Ver vision</a>
+                                    <a class="dropdown-item" href="#">Modificar vision</a>
+                                </div>
+                        </li>
+                        @endsection
                     @else
                         @if(Auth::user()->hasRole('monitor'))
                             <div>Acceso como Monitor</div>

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top text-uppercase">
   <div class="container">
     <a class="navbar-brand" href="#">
         <div class="logo">
@@ -19,10 +19,10 @@
               </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Misión</a>
+          <a class="nav-link" href="{{ route('home.mision') }}">Misión</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Visión</a>
+          <a class="nav-link" href="{{ route('home.vision') }}">Visión</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#footer">Contacto</a>

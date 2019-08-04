@@ -25,48 +25,26 @@ Route::prefix('admin')->group(function () {
     ]);
 
     // CRUD MONITORES
-    Route::get('/create/monitores', function () {
-        // Matches The "/admin/users" URL
-    });
-    Route::get('/show/monitores', function () {
-        // Matches The "/admin/users" URL
-    });
-    Route::get('/update/monitores', function () {
-        // Matches The "/admin/users" URL
-    });
-    Route::get('/delete/monitores', function () {
-        // Matches The "/admin/users" URL
-    });
+    Route::resource('monitores','MonitoresController');
+    
 
     // CRUD CURSO
-    Route::get('/create/curso', function () {
-        // Matches The "/admin/users" URL
-    });
-    Route::get('/show/curso', function () {
-        // Matches The "/admin/users" URL
-    });
-    Route::get('/update/curso', function () {
-        // Matches The "/admin/users" URL
-    });
-    Route::get('/delete/curso', function () {
-        // Matches The "/admin/users" URL
-    });
-    // RU CONTENIDO BASICO
-    Route::get('/show/content', function () {
-        // Matches The "/admin/users" URL
-    });
-    Route::get('/update/content', function () {
-        // Matches The "/admin/users" URL
-    });
+    Route::resource('courses','CoursesController');
+    Route::get('courses/{id}/destroy',[
+        'uses' => 'CoursesController@destroy',
+        'as' => 'courses.destroy'
+    ]);
 });
 
 Route::prefix('home')->group(function () {
-    Route::get('/mision', function () {
-        // Matches The "/admin/users" URL
-    });
-    Route::get('/vision', function () {
-        // Matches The "/admin/users" URL
-    });
+    Route::get('/mision', [
+        'uses' => 'UsersController@mision',
+        'as' => 'home.mision'
+    ]);
+    Route::get('/vision', [
+        'uses' => 'UsersController@vision',
+        'as' => 'home.vision'
+    ]);
 });
 Auth::routes();
 

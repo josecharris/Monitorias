@@ -51,7 +51,7 @@
       <h5 class="mb-1">Sitio oficial de la UPTC</h5>
     </li>
     <li class="list-inline-item">
-      <a href="http://www.uptc.edu.co/" target="_blank" class="btn btn-danger btn-rounded">Sign up!</a>
+      <a href="http://www.uptc.edu.co/" target="_blank" class="btn btn-danger btn-rounded">¡Vamos!</a>
     </li>
   </ul>
   <hr>

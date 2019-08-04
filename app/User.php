@@ -67,4 +67,9 @@ class User extends Authenticatable
         }
         return false;
     }
+
+
+    public function courses(){
+        return $this->belongsToMany('App\Course')->withTimestamps();
+    }
 }

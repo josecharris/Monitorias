@@ -11,6 +11,7 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
+
         $role_monitor = App\Role::where('name', 'monitor')->first();
         $role_admin = App\Role::where('name', 'admin')->first();
         $role_docente = App\Role::where('name', 'docente')->first();
@@ -29,6 +30,7 @@ class UserTableSeeder extends Seeder
         $user->password = bcrypt('secret');
         $user->save();
         $user->roles()->attach($role_admin);
+        
 
         $user = new App\User();
         $user->name = 'Docente';

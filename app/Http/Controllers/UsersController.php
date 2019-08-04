@@ -100,4 +100,12 @@ class UsersController extends Controller
         $user->delete();
         return redirect()->route('users.index')->with('mensaje','El registro fue eliminado.');
     }
+
+    public function mision(){
+        return view('contenido/mision');
+    }
+
+    public function vision(){
+        return view('contenido/vision');
+    }
 }

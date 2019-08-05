@@ -1,3 +1,11 @@
+<style>
+h1 {
+  font-size: 70px;
+  margin-bottom: 0;
+  font-family: 'Lobster', cursive;
+}
+</style>
+
 <div id="demo" class="carousel slide" data-ride="carousel">
 
   <!-- Indicators -->
@@ -12,19 +20,19 @@
     <div class="carousel-item active">
         <img src="{{ asset('img/joven-estudiando.jpg') }}" alt="Estudio" style="width: 100%; height:550px;">
         <div class="carousel-caption d-none d-md-block">
-            <h1 style="margin-bottom: 90px;">Comprometidos con la calidad</h5>
+            <h1 style="margin-bottom: 100px;">Comprometidos con la calidad</h1>
         </div>
     </div>
     <div class="carousel-item">
         <img src="{{ asset('img/mujer-estudiando.jpg') }}" alt="Estudio" style="width: 100%; height:550px;">
         <div class="carousel-caption d-none d-md-block">
-            <h1 style="margin-bottom: 90px;">Superando toda adversidad</h5>
+            <h1 style="margin-bottom: 90px;">Superando toda adversidad</h1>
         </div>
     </div>
     <div class="carousel-item">
         <img src="{{ asset('img/biblioteca.jpg') }}" alt="Estudio" style="width: 100%; height:550px;">
         <div class="carousel-caption d-none d-md-block">
-            <h1 style="margin-bottom: 90px;">Pensando en el progreso</h5>
+            <h1 style="margin-bottom: 90px;">Pensando en el progreso</h1>
         </div>
     </div>
   </div>

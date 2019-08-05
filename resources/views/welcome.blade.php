@@ -6,6 +6,7 @@
     @include('admin.templates.partials.carousel')
 @endsection
 
+
 @section('footer')
     @include('admin.templates.partials.footer')
 @endsection

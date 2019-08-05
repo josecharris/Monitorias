@@ -1,11 +1,7 @@
-@extends('admin.templates.main')
-
-@section('title','Mision')
+@extends('contenido.template')
+@section('title','Vision')
+@section('titulo','Vision')
 
 @section('content')
-
-@endsection
-
-@section('footer')
-    @include('admin.templates.partials.footer')
+    <p>{{ $info->descripcion }}</p>
 @endsection

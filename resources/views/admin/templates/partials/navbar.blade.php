@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top text-uppercase">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
   <div class="container">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="/">
         <div class="logo">
             <img src="{{ asset('img/logo_eduvirtual.png') }}" style="height: 48px;">
             <img src="{{ asset('img/logo_monitorias.png') }}" style="height: 48px; margin-left:30px;">
@@ -14,7 +14,7 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Inicio
+          <a class="nav-link" href="/">Inicio
                 <span class="sr-only">(current)</span>
               </a>
         </li>

@@ -30,11 +30,10 @@
                             Administrar info
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Ver mision</a>
-                                <a class="dropdown-item" href="#">Modificar mision</a>
+                                <a class="dropdown-item" href="{{ route('home.editmision') }}">Modificar mision</a>
                                 <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Ver vision</a>
-                                    <a class="dropdown-item" href="#">Modificar vision</a>
+                                    <a class="dropdown-item" href="{{ route('home.editVision') }}">Modificar vision</a>
+                                    
                                 </div>
                         </li>
                         @endsection

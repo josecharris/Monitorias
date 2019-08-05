@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Role;
 use App\User;
+use App\Information;
 
 class UsersController extends Controller
 {
@@ -102,10 +103,33 @@ class UsersController extends Controller
     }
 
     public function mision(){
-        return view('contenido/mision');
+        $info = Information::find(1);
+        return view('contenido/mision')->with('info',$info);
+    }
+
+    public function editMision(){
+        return view('contenido/editMision');
+    }
+    public function updateMision(Request $request){
+        $info = Information::find(1);
+        $info->descripcion = $request->descripcion;
+        $info->save();
+        return redirect()->route('home');
     }
 
     public function vision(){
-        return view('contenido/vision');
+        $info = Information::find(2);
+        return view('contenido/vision')->with('info',$info);;
+    }
+
+    public function editVision(){
+        return view('contenido/editVision');
+    }
+
+    public function updateVision(Request $request){
+        $info = Information::find(2);
+        $info->descripcion = $request->descripcion;
+        $info->save();
+        return redirect()->route('home');
     }
 }

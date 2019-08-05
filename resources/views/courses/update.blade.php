@@ -49,8 +49,8 @@
                 {!! Form::select('monitor',$monitor, null, ['class'=>'form-control']) !!}
             </div>
             <div class="form-group col-md-10">
-            {!! Form::submit('Registrar',['class'=>'btn btn-primary']) !!}  
-        </div>
+                {!! Form::submit('Registrar',['class'=>'btn btn-primary']) !!}  
+            </div>
         </div>
     {!! Form::close() !!}
 @endsection

@@ -41,10 +41,31 @@ Route::prefix('home')->group(function () {
         'uses' => 'UsersController@mision',
         'as' => 'home.mision'
     ]);
+    Route::get('/edit-mision', [
+        'uses' => 'UsersController@editMision',
+        'as' => 'home.editmision'
+    ]);
+    Route::get('/update-mision', [
+        'uses' => 'UsersController@updateMision',
+        'as' => 'home.updatemision'
+    ]);
+
+    //VISION
+
     Route::get('/vision', [
         'uses' => 'UsersController@vision',
         'as' => 'home.vision'
     ]);
+
+    Route::get('/edit-vision', [
+        'uses' => 'UsersController@editVision',
+        'as' => 'home.editVision'
+    ]);
+    Route::get('/update-vision', [
+        'uses' => 'UsersController@updateVision',
+        'as' => 'home.updateVision'
+    ]);
+
 });
 Auth::routes();
 

@@ -42,7 +42,7 @@ class CoursesController extends Controller
         $docente = User::where('id', $request->docente )->first();
         $path="";
         if($request->archivosubido ==""){
-            $path = "None.";
+            $path = "default.jpg";
         }else{
             $path = $request->archivosubido;
         }
@@ -95,7 +95,7 @@ class CoursesController extends Controller
         $monitor = User::where('id', $request->monitor )->first();
         
         if($request->archivosubido ==""){
-            $path = "None.";
+            $path = "default.jpg";
         }else{
             $path = $request->archivosubido;
         }
@@ -126,4 +126,6 @@ class CoursesController extends Controller
         $curso->delete();
         return redirect()->route('courses.index')->with('mensaje','El registro fue eliminado.');
     }
+
+    
 }

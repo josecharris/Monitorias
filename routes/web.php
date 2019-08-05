@@ -57,6 +57,16 @@ Route::prefix('home')->group(function () {
         'as' => 'home.vision'
     ]);
 
+    Route::get('/crear-matricula',[
+        'uses' => 'UsersController@matricula',
+        'as' => 'matricula'
+    ]);
+
+    Route::get('/matricular',[
+        'uses' => 'UsersController@matricular',
+        'as' => 'home.matricular'
+    ]);
+
     Route::get('/edit-vision', [
         'uses' => 'UsersController@editVision',
         'as' => 'home.editVision'

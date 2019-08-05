@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Role;
 use App\User;
 use App\Information;
+use App\Course;
 
 class UsersController extends Controller
 {
@@ -124,6 +125,19 @@ class UsersController extends Controller
 
     public function editVision(){
         return view('contenido/editVision');
+    }
+
+    public function matricula(){
+        $curso = Course::orderBy('id','ASC')->paginate(100);
+        $users = User::orderBy('id','ASC')->paginate(100);
+        return view('courses/matricula', compact('curso','users') );
+    }
+
+    public function matricular(Request $request){
+        $estudiante = User::where('id', $request->estudiantes )->first();
+        $curso = Course::where('id', $request->cursos)->first();
+        $estudiante->courses()->attach($curso);
+        return redirect()->route('home');
     }
 
     public function updateVision(Request $request){

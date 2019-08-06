@@ -56,7 +56,8 @@
                                     <p class="card-text">Eres monitor de la asignatura {{ $course->name }} y tienes sesión de {{ $course->started_at }}
                                     hasta las {{ $course->finished_at }}, ¡Da lo mejor de ti! Recuerda que el conocimiento es universal.</p>
                                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                    <a href="#" class="btn btn-primary">Ver actividades</a>
+                                    <a href="{{ route('posts.edit', $course->id) }}" class="btn btn-primary">Crear lección</a>
+                                    <a href="{{ route('posts.show', $course->id) }}" class="btn btn-primary">Ver lecciones</a>
                                 </div>
                             </div>
                             @endforeach 
@@ -84,7 +85,8 @@
                                         hasta las {{ $course->finished_at }}, ¡Da lo mejor de ti! Recuerda que transmitir conocimiento
                                         es la labor más importante para nuestra sociedad.</p>
                                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                        <a href="#" class="btn btn-primary">Ver actividades</a>
+                                        <a href="{{ route('posts.edit', $course->id) }}" class="btn btn-primary">Crear lección</a>
+                                        <a href="{{ route('posts.show', $course->id) }}" class="btn btn-primary">Ver lecciones</a>
                                     </div>
                                 </div>
                                 @endforeach 
@@ -106,7 +108,7 @@
                                         hasta las {{ $course->finished_at }}, ¡Da lo mejor de ti! Recuerda que un grupo de personas
                                         realiza un arduo trabajo para formarte, esfuerzate, y agradece por ello.</p>
                                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                        <a href="#" class="btn btn-primary">Ver actividades</a>
+                                        <a href="{{ route('posts.show', $course->id) }}" class="btn btn-primary">Ver lecciones</a>
                                     </div>
                                 </div>
                                 @endforeach 

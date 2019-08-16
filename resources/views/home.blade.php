@@ -39,11 +39,6 @@
                         @endsection
                     @else
                         @if(Auth::user()->hasRole('monitor'))
-                        @section('menu-bar')
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('users.index') }}">Actividades</a>  
-                        </li>
-                        @endsection
                         <div class="mis-cursos">
                             <h3>Mis cursos</h3>
                             <hr>
